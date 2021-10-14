@@ -8,6 +8,7 @@ The goal for this project is for it to be a way to track my progress as I improv
 
 * [] English translation for ZCasino.py
 * [] French translation for README.md
+* [] Profile save feature
 
 ## Goals & ideas for this project
 
