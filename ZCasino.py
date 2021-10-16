@@ -1,6 +1,6 @@
 import os
-from random import randint
 from math import ceil
+from random import randint
 
 somme = 1000
 nom = input("Comment vous appelez-vous ? ")
@@ -34,7 +34,7 @@ while somme > 0:
             print("Merci de miser un montant de jetons adéquat.")
             Mise = -1
             continue
-    
+
     print("Le croupier lance la roue...")
     os.system("pause")
     print("La roue tourne...")
@@ -44,11 +44,15 @@ while somme > 0:
     print(f"La roue s'arrête sur la case {NGagnant} !")
 
     if NMise == NGagnant:
-        print(f"Jackpot ! Vous avez misé sur la bonne case ! Vous remportez trois fois votre mise soit {3*Mise} jetons !")
+        print(
+            f"Jackpot ! Vous avez misé sur la bonne case ! Vous remportez trois fois votre mise soit {3*Mise} jetons !"
+        )
         somme += 3 * Mise
     elif NMise % 2 == NGagnant % 2:
-        print(f"Le numéro misé est de la même couleur que le numéro gagnant ! Vous remportez la moitié de votre mise soit {ceil(Mise*0.5)} jetons !")
-        somme += ceil(Mise*0.5)
+        print(
+            f"Le numéro misé est de la même couleur que le numéro gagnant ! Vous remportez la moitié de votre mise soit {ceil(Mise*0.5)} jetons !"
+        )
+        somme += ceil(Mise * 0.5)
     else:
         print("Dommage ! Vous perdez votre mise :(")
         somme -= Mise
@@ -58,7 +62,7 @@ while somme > 0:
         break
 
     print(f"Vous disposez maintenant de {somme} jetons.")
-    
+
     quitter = input("Souhaitez-vous quitter le casino (o/n) ? ")
     if quitter == "o" or quitter == "O":
         print("Vous quittez le casino avec vos gains. À bientôt !")
